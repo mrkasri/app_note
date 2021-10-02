@@ -1,7 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:app_note/auth/login.dart';
+import 'package:app_note/auth/sign_up.dart';
 import 'package:flutter/material.dart';
+
+final ThemeData myAppTheme = ThemeData(
+  brightness: Brightness.light,
+  primarySwatch: Colors.blue,
+  primaryColor: Colors.blue[500],
+  primaryColorBrightness: Brightness.light,
+);
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +22,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      showSemanticsDebugger: false,
+      debugShowCheckedModeBanner: false,
       title: 'Note',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: myAppTheme,
       home: const Login(),
+      routes: {"login": (context) => Login(), "signup": (context) => SignUp()},
     );
   }
 }
