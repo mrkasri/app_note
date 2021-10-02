@@ -2,6 +2,7 @@
 
 import 'package:app_note/auth/login.dart';
 import 'package:app_note/auth/sign_up.dart';
+import 'package:app_note/home/homepage.dart';
 import 'package:flutter/material.dart';
 
 final ThemeData myAppTheme = ThemeData(
@@ -26,7 +27,11 @@ class MyApp extends StatelessWidget {
       title: 'Note',
       theme: myAppTheme,
       home: const Login(),
-      routes: {"login": (context) => Login(), "signup": (context) => SignUp()},
+      routes: {
+        "login": (context) => Login(),
+        "signup": (context) => SignUp(),
+        "homepage": (context) => HomePage()
+      },
     );
   }
 }

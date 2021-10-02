@@ -80,7 +80,10 @@ class _LoginState extends State<Login> {
                       ),
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushReplacementNamed('homepage');
+                          },
                           child: Text('Login'),
                         ),
                       )
