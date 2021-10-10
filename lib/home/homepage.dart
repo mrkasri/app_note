@@ -51,11 +51,14 @@ class _HomePageState extends State<HomePage> {
           child: ListView.builder(
               itemCount: notes.length,
               itemBuilder: (context, i) {
-                return ListNotes(notes: notes[i]);
+                return Dismissible(
+                    key: Key("$i"), child: ListNotes(notes: notes[i]));
               })),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('addnote');
+        },
       ),
     );
   }

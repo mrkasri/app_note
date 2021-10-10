@@ -2,6 +2,7 @@
 
 import 'package:app_note/auth/login.dart';
 import 'package:app_note/auth/sign_up.dart';
+import 'package:app_note/files/addnotes.dart';
 import 'package:app_note/home/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "login": (context) => Login(),
         "signup": (context) => SignUp(),
-        "homepage": (context) => HomePage()
+        "homepage": (context) => HomePage(),
+        "addnote": (context) => AddNote()
       },
     );
   }
